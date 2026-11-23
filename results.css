@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #ecf2ff;
+  font-family: "Hanken Grotesk", sans-serif;
+  color: #303b59;
+}
+
+.results-card {
+  width: min(90%, 650px);
+  display: flex;
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 15px 30px rgba(48, 59, 89, 0.12);
+  overflow: hidden;
+}
+
+.results-card__header,
+.results-card__summary {
+  width: 50%;
+  padding: 32px;
+}
+
+.results-card__header {
+  text-align: center;
+  color: white;
+  background: linear-gradient(#6943ff, #2f2ce9);
+  border-radius: 28px;
+}
+
+.results-card__header-title,
+.results-card__summary-title {
+  margin: 0 0 24px;
+  font-size: 20px;
+}
+
+.results-card__header-title {
+  color: #d3caff;
+}
+
+.results-card__score {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(#4e21ca, #2421ca);
+}
+
+.results-card__score-value {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.results-card__score-max {
+  color: #aaa4ff;
+  font-size: 14px;
+}
+
+.results-card__score-text {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.results-card__score-description {
+  margin: 0;
+  color: #d3caff;
+  line-height: 1.4;
+}
+
+.results-card__summary-title {
+  color: #303b59;
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.summary-row strong {
+  color: #303b59;
+}
+
+.reaction {
+  color: #d66b72;
+  background: #fff6f5;
+}
+
+.memory {
+  color: #d8aa35;
+  background: #fffbf2;
+}
+
+.verbal {
+  color: #35a98e;
+  background: #f2fbf8;
+}
+
+.visual {
+  color: #555ca8;
+  background: #f3f3fd;
+}
+
+.results-card__continue-button {
+  width: 100%;
+  margin-top: 14px;
+  padding: 15px;
+  border: 0;
+  border-radius: 30px;
+  color: white;
+  background: #303b59;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.results-card__continue-button:hover {
+  background: linear-gradient(#6943ff, #2f2ce9);
+}
+
+@media (max-width: 600px) {
+  body {
+    display: block;
+  }
+
+  .results-card {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0 0 28px 28px;
+  }
+
+  .results-card__header,
+  .results-card__summary {
+    width: 100%;
+  }
+
+  .results-card__header {
+    border-radius: 0 0 28px 28px;
+  }
+}
